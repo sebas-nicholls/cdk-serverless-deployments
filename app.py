@@ -4,6 +4,7 @@ import os
 import aws_cdk as cdk
 
 from cdk_pipeline.cdk_pipeline_stack import CdkPipelineStack
+from cdk_pipeline.cdk_canary_pipeline_stack import CdkCanaryPipelineStack
 
 
 app = cdk.App()
@@ -24,5 +25,8 @@ CdkPipelineStack(app, "CdkPipelineStack",
 
     # For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html
     )
+CdkCanaryPipelineStack(app, "CdkCanaryPipelineStack",
+    env=cdk.Environment(account='382821043170', region='us-east-1'),
+)
 
 app.synth()

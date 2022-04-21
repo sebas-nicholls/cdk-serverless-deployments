@@ -15,6 +15,6 @@ def lambda_handler(event, context):
 
     return {
         "statusCode": 200,
-        "body":"trying Canary 3",
+        "body":"trying Canary 4",
         "headers":{"Content-Type":"application/json"}
     }

@@ -13,6 +13,8 @@ def lambda_handler(event, context):
         TableName=table_name
     )
 
+    response["teamMates"]="Hello amnisty group"
+
     return {
         "statusCode": 200,
         "body":json.dumps(response),
